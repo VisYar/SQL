@@ -1,6 +1,6 @@
 # SQL Tutorial. Exercises
 https://www.w3schools.com/sql/exercise.asp
-## _SQL SELECT_
+## SQL SELECT
 
 ##### 1. Insert the missing statement to get all the columns from the **Customers** table
 ```sql
@@ -14,7 +14,7 @@ SELECT City FROM Customers;
 ```sql
 SELECT DISTINCT Country FROM Customers;
 ```
-## _SQL WHERE_
+## SQL WHERE
 ##### 1. Select all records where the City column has the value "Berlin"
 ```sql
 SELECT * FROM Customers WHERE CITY = 'BERLIN';
@@ -35,7 +35,7 @@ SELECT * FROM Customers WHERE City = 'Berlin' AND POSTALCODE = 12209;
 ```sql
 SELECT * FROM Customers WHERE City = 'Berlin' OR CITY = 'LONDON';
 ```
-## _SQL ORDER BY_
+## SQL ORDER BY
 ##### 1. Select all records from the Customers table, sort the result alphabetically by the column City
 ```sql
 SELECT * FROM Customers ORDER BY CITY;
@@ -48,14 +48,14 @@ SELECT * FROM Customers ORDER BY CITY DESC;
 ```sql
 SELECT * FROM Customers ORDER BY COUNTRY, CITY;
 ```
-## _SQL INSERT_
+## SQL INSERT
 ##### 1. Insert a new record in the Customers table
 ```sql
 INSERT INTO Customers (CustomerName, Address, City, PostalCode,Country)
 VALUES ('Hekkan Burger','Gateveien 15','Sandnes','4306','Norway');
 ```
 
-## _SQL NULL_
+## SQL NULL
 ##### 1. Select all records from the Customers where the PostalCode column is empty
 ```sql
 SELECT * FROM Customers WHERE POSTALCODE IS NULL;
@@ -65,7 +65,7 @@ SELECT * FROM Customers WHERE POSTALCODE IS NULL;
 SELECT * FROM Customers WHERE POSTALCODE IS NOT NULL;
 ```
 
-## _SQL UPDATE_
+## SQL UPDATE
 ##### 1. Update the City column of all records in the Customers table
 ```sql
 UPDATE Customers SET City = 'Oslo';
@@ -79,7 +79,7 @@ UPDATE Customers SET City = 'Oslo' WHERE Country = 'Norway';
 UPDATE Customers SET City = 'Oslo', COUNTRY = 'Norway' WHERE CustomerID = 32;
 ```
 
-## _SQL DELETE_
+## SQL DELETE
 ##### 1. Delete all the records from the Customers table where the Country value is 'Norway'
 ```sql
 DELETE FROM Customers WHERE Country = 'Norway';
@@ -89,7 +89,7 @@ DELETE FROM Customers WHERE Country = 'Norway';
 DELETE FROM Customers;
 ```
 
-## _SQL FUNCTIONS_
+## SQL FUNCTIONS
 ##### 1. Use the MIN function to select the record with the smallest value of the Price column
 ```sql
 SELECT MIN(PRICE) FROM Products;
@@ -111,7 +111,7 @@ SELECT AVG(PRICE) FROM Products;
 SELECT SUM(PRICE) FROM Products;
 ```
 
-## _SQL LIKE_
+## SQL LIKE
 ##### 1. Select all records where the value of the City column starts with the letter "a"
 ```sql
 SELECT * FROM Customers WHERE CITY LIKE 'a%';
@@ -133,7 +133,7 @@ SELECT * FROM Customers WHERE CITY LIKE 'a%b';
 SELECT * FROM Customers WHERE CITY NOT LIKE 'a%';
 ```
 
-## _SQL WILDCARDS_
+## SQL WILDCARDS
 ##### 1. Select all records where the second letter of the City is an "a"
 ```sql
 SELECT * FROM Customers WHERE City LIKE '?a%';
@@ -151,7 +151,7 @@ SELECT * FROM Customers WHERE City LIKE '[a-f]%';
 SELECT * FROM Customers WHERE City LIKE '[!acf]%';
 ```
 
-## _SQL IN_
+## SQL IN
 ##### 1. Use the IN operator to select all the records where Country is either "Norway" or "France"
 ```sql
 SELECT * FROM Customers WHERE COUNTRY IN ('NORWAY', 'France');
@@ -161,7 +161,7 @@ SELECT * FROM Customers WHERE COUNTRY IN ('NORWAY', 'France');
 SELECT * FROM Customers WHERE COUNTRY NOT IN ('NORWAY', 'France');
 ```
 
-## _SQL BETWEEN_
+## SQL BETWEEN
 ##### 1. Use the BETWEEN operator to select all the records where the value of the Price column is between 10 and 20
 ```sql
 SELECT * FROM Products WHERE Price BETWEEN 10 AND 20;
@@ -175,7 +175,7 @@ SELECT * FROM Products WHERE Price NOT BETWEEN 10 AND 20;
 SELECT * FROM Products WHERE ProductName BETWEEN 'GEITOST' AND 'PAVLOVA';
 ```
 
-## _SQL ALIAS_
+## SQL ALIAS
 ##### 1. When displaying the Customers table, make an ALIAS of the PostalCode column, the column should be called Pno instead
 ```sql
 SELECT CustomerName, Address, PostalCode AS PNO FROM Customers;
@@ -198,7 +198,7 @@ SELECT * FROM Orders INNER JOIN CUSTOMERS ON Orders.CustomerID=Customers.Custome
 ```sql
 SELECT * FROM Orders RIGHT JOIN CUSTOMERS ON Orders.CustomerID=Customers.CustomerID;
 ```
-## _SQL GROUP BY_
+## SQL GROUP BY
 ##### 1. List the number of customers in each country
 ```sql
 SELECT COUNT(CustomerID), Country FROM Customers GROUP BY COUNTRY;
@@ -210,7 +210,7 @@ GROUP BY Country
 ORDER BY COUNT(CustomerID) DESC;
 ```
 
-## _SQL DATABASE_
+## SQL DATABASE
 ##### 1. Write the correct SQL statement to create a new database called testDB
 ```sql
 CREATE DATABASE TESTDB;
