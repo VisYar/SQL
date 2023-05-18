@@ -1,4 +1,7 @@
 # SQL Tutorial. Exercises
+
+[Справочник по SQL](https://somov-qa.github.io/pdf/books/sql/index.html)
+
 https://www.w3schools.com/sql/exercise.asp
 ## SQL SELECT
 
